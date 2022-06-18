@@ -12,19 +12,20 @@ const Fires = (props) => {
   const [eventInfo, setEventInfo] = useState(null);
   const [title, setTitle] = useState("Wildfires");
 
+  const fetchItems = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.get(
+        "https://eonet.gsfc.nasa.gov/api/v2.1/events"
+      );
+      setEvents(response.data.events);
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
-    const fetchItems = async () => {
-      setLoading(true);
-      try {
-        const response = await axios.get(
-          "https://eonet.gsfc.nasa.gov/api/v2.1/events"
-        );
-        setEvents(response.data.events);
-        setLoading(false);
-      } catch (err) {
-        console.log(err);
-      }
-    };
     fetchItems();
   }, []);
 

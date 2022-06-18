@@ -17,7 +17,6 @@ const App = () => {
   const menu = <Menu />;
   const footer = <Footer />;
 
-  console.log(process.env.REACT_APP_api_key);
   const content = (
     <Routes>
       <Route path="/photos" element={<Photos />} />

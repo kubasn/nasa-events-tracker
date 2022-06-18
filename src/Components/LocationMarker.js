@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Icon } from "@iconify/react";
 
 const LocationMarker = ({ lat, lng, onClick, type }) => {
-  console.log(type, setType());
+  console.log(type);
   return (
     <Component onClick={onClick}>
       <LocationIcon icon={setType(type)} />

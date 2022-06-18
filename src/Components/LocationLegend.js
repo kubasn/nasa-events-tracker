@@ -2,21 +2,24 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Icon } from "@iconify/react";
 import locationIcon from "@iconify/icons-mdi/fire-alert";
+import Checkbox from "./UI/Checkbox";
 
 const LocationLegend = (props) => {
-  const [checked, setChecked] = useState([]);
+  const [checked, setChecked] = useState(["Wildfires"]);
 
-  const onCheck = (event) => {
-    event.preventDefault();
+  const onCheck = (check, value) => {
+    //event.preventDefault();
+    console.log(check, value);
     let updatedList = [...checked];
-    if (event.target.checked) {
-      updatedList = [...checked, event.target.value];
+    if (check) {
+      updatedList.push(value);
     } else {
-      updatedList.splice(checked.indexOf(event.target.value), 1);
+      updatedList.splice(updatedList.indexOf(value), 1);
     }
     setChecked(updatedList);
-    props.changeFunction(checked);
-    //    / console.log(checked);
+    console.log(updatedList);
+    props.changeFunction(updatedList);
+    // console.log(updatedList);
   };
   return (
     <Component>
@@ -26,59 +29,54 @@ const LocationLegend = (props) => {
           {" "}
           <LocationIcon icon={locationIcon} />
           Pożary
-          <Input
-            type="checkbox"
+          <Checkbox
             id="legend"
             name="fire"
             value="Wildfires"
             onChange={onCheck}
-          ></Input>
+            checked={true}
+          ></Checkbox>
         </Element>
         <Element>
           {" "}
           <LocationIcon icon="emojione:volcano" />
           Wulkany
-          <Input
-            type="checkbox"
+          <Checkbox
             id="legend"
             name="volcanoe"
             value="Volcanoes"
             onChange={onCheck}
-          ></Input>
+            checked={false}
+          ></Checkbox>
         </Element>
         <Element>
           {" "}
           <LocationIcon icon="carbon:drought" />
           Susza
-          <Input
-            type="checkbox"
+          <Checkbox
             id="legend"
             name="drought"
             value="drought"
             onChange={onCheck}
-          ></Input>
+            checked={false}
+          ></Checkbox>
         </Element>
         <Element>
           {" "}
           <LocationIcon icon="openmoji:flood" />
           Powódź
-          <Input
-            type="checkbox"
+          <Checkbox
             id="legend"
             name="flood"
             value="flood"
             onChange={onCheck}
-          ></Input>
+            checked={false}
+          ></Checkbox>
         </Element>
       </Body>
     </Component>
   );
 };
-
-const Input = styled.input`
-  position: absolute;
-  right: 5px;
-`;
 
 const LocationIcon = styled(Icon)`
   font-size: 14px;
