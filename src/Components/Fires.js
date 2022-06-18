@@ -68,7 +68,7 @@ const Fires = (props) => {
             <LocationLegend changeFunction={changeFunction} />
             <GoogleMapReact
               bootstrapURLKeys={{
-                key: "AIzaSyA15GEpBi9SrYjg9pmvg3JDWL1RbgzdaHo",
+                key: process.env.REACT_APP_bootstrapURLKeys,
               }}
               defaultCenter={{ lat: 42.3265, lng: -122.8756 }}
               defaultZoom={6}

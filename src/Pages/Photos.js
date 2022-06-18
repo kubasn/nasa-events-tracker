@@ -12,7 +12,7 @@ const Photos = () => {
   const getPhoto = async () => {
     try {
       const response = await axios.get(
-        `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=${page}&api_key=B9ImowGvXN1MCCbvbEPceOSvtg8k3j8gk5fTreTf`
+        `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=${page}&api_key=${process.env.REACT_APP_api_key}`
       );
       if (page != 1) {
         setBlocked([]);

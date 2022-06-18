@@ -12,9 +12,12 @@ import Layout from "./Components/Layout";
 import Photos from "./Pages/Photos";
 import Footer from "./Components/Footer";
 import Fires from "./Components/Fires";
+
 const App = () => {
   const menu = <Menu />;
   const footer = <Footer />;
+
+  console.log(process.env.REACT_APP_api_key);
   const content = (
     <Routes>
       <Route path="/photos" element={<Photos />} />

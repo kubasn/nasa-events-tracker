@@ -11,7 +11,7 @@ const PhotoOfDay = (props) => {
   const getPhoto = async () => {
     try {
       const response = await axios.get(
-        "https://api.nasa.gov/planetary/apod?api_key=B9ImowGvXN1MCCbvbEPceOSvtg8k3j8gk5fTreTf"
+        `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_api_key}`
       );
       setPhoto(response.data);
       setLoading(false);
