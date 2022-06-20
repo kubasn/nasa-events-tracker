@@ -127,9 +127,10 @@ const Heading1 = styled.h1`
 `;
 
 const Image = styled.img`
-  height: 80%;
-  width: 98%;
-  padding: 1% 1% 0 1%;
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+  margin: auto;
 `;
 
 const Description = styled.div`

@@ -34,15 +34,15 @@ const Fires = (props) => {
   };
 
   const changeFunction = (events) => {
-    console.log(events);
+    //console.log(events);
     setTitle(events);
-    console.log("ello");
   };
 
   const IconMarkers = events.map((event) => {
-    // console.log(title, event.categories[0].title);
-    if (event && title) {
-      return title.map((el) => (
+    // console.log(title, event.categories[0]);
+    console.log(title);
+    if (title.includes(event.categories[0].title, 0)) {
+      return (
         <LocationMarker
           lat={event.geometries[0].coordinates[1]}
           lng={event.geometries[0].coordinates[0]}
@@ -56,8 +56,13 @@ const Fires = (props) => {
             })
           }
         />
-      ));
+      );
     }
+
+    //title.map((el) => (
+
+    // ));
+    //   }
   });
 
   return (
