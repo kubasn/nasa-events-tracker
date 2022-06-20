@@ -7,10 +7,13 @@
 
 Screens
 
-  <img alt="main page" src="./images/home.png">
-      <img alt="photos mars" src="./images/photos_mars.png">
-    <img alt=" fires" src="./images/fires.png">
-  <img alt="fires" src="./images/fires1.png">
+## Main page
+<img alt="main page" src="./images/home.png">
+## Mars photos
+<img alt="photos mars" src="./images/photos_mars.png">
+## Events tracker
+<img alt=" fires" src="./images/fires.png">
+<img alt="fires" src="./images/fires1.png">
 
 
 
