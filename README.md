@@ -1,6 +1,32 @@
-# Getting Started with Create React App
+# Nasa event tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This app uses NASA Open API and Google Maps Api
+
+- Created with React
+### [![react](https://skills.thijs.gg/icons?i=react)](https://skills.thijs.gg)
+
+Screens
+
+  <img alt="main page" src="./images/home.png">
+      <img alt="photos mars" src="./images/photos_mars.png">
+    <img alt=" fires" src="./images/fires.png">
+  <img alt="fires" src="./images/fires1.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Available Scripts
 
